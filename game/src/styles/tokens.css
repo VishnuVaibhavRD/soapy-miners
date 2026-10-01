@@ -1,0 +1,106 @@
+/* =========================================================
+   DESIGN TOKENS
+   Single source of truth for colour, depth and type.
+   Everything else in the app should reference these.
+========================================================= */
+
+:root {
+  /* --- Surfaces: deep cave browns, darkest first --- */
+  --ink-900: #060403;
+  --ink-800: #0b0805;
+  --ink-700: #110c07;
+  --ink-600: #18110a;
+  --ink-500: #21170e;
+  --ink-400: #2c1f13;
+
+  /* --- Edges / borders, dark to light --- */
+  --edge-900: #0f0a05;
+  --edge-700: #2a1c0f;
+  --edge-500: #4a3520;
+  --edge-300: #6f4f2a;
+  --edge-100: #8a6534;
+
+  /* --- Gold accent --- */
+  --gold-100: #f7e2a4;
+  --gold-300: #f0cd63;
+  --gold-500: #e3b84d;
+  --gold-700: #a97e2c;
+  --gold-900: #6d4f18;
+
+  /* --- Text --- */
+  --text: #f2e6c9;
+  --text-muted: #a49273;
+  --text-dim: #7a6a52;
+  --text-on-gold: #1a1206;
+
+  /* --- Semantic --- */
+  --danger: #e0836c;
+  --success: #a9c47c;
+  --warning: #dcb156;
+
+  /* --- Panel surfaces --- */
+  --surface-panel: linear-gradient(
+    180deg,
+    rgba(38, 28, 18, 0.97),
+    rgba(18, 13, 9, 0.97)
+  );
+  --surface-sunken: rgba(8, 5, 3, 0.85);
+  --surface-plank: repeating-linear-gradient(
+    0deg,
+    #2c1b0f 0,
+    #2c1b0f 10px,
+    #34200f 11px,
+    #34200f 20px
+  );
+
+  /* --- Depth: hard pixel-style shadows, no blur --- */
+  --shadow-panel:
+    0 0 0 2px var(--edge-900),
+    5px 5px 0 rgba(0, 0, 0, 0.45);
+  --shadow-panel-lg:
+    0 0 0 3px var(--edge-900),
+    8px 8px 0 rgba(0, 0, 0, 0.5);
+  --shadow-button:
+    0 4px 0 var(--gold-900),
+    0 0 0 2px var(--edge-900);
+  --shadow-button-hover:
+    0 6px 0 var(--gold-900),
+    0 0 0 2px var(--edge-900);
+  --inset-rim: inset 0 0 0 2px var(--edge-300);
+  --glow-gold: 0 0 18px rgba(227, 184, 77, 0.3);
+
+  /* --- Type scale --- */
+  --fs-micro: 8px;
+  --fs-tiny: 9px;
+  --fs-small: 11px;
+  --fs-body: 13px;
+  --fs-md: 15px;
+  --fs-lg: 18px;
+  --fs-xl: 22px;
+
+  --track-tight: 0.08em;
+  --track-wide: 0.16em;
+  --track-wider: 0.24em;
+
+  /* --- Layout --- */
+  --header-h: 72px;
+  --step: 4px;
+
+  /* --- Motion: stepped, to match the pixel aesthetic --- */
+  --ease-step: steps(2, end);
+  --dur-fast: 120ms;
+  --dur-med: 200ms;
+
+  /* Compatibility aliases for older rules still in flight. */
+  --mine-black: var(--ink-900);
+  --mine-dark: var(--ink-700);
+  --mine-brown: var(--ink-400);
+  --mine-border: var(--edge-300);
+  --mine-gold: var(--gold-500);
+  --mine-gold-dark: var(--gold-700);
+  --mine-text: var(--text);
+  --mine-muted: var(--text-muted);
+
+  --background: var(--ink-900);
+  --foreground: var(--text);
+}

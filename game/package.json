@@ -1,0 +1,29 @@
+{
+  "name": "soapy-miners-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "lint": "eslint",
+    "verify": "node scripts/verify-camp-layout.mjs && node scripts/verify-css.mjs",
+    "verify:layout": "node scripts/verify-camp-layout.mjs",
+    "verify:css": "node scripts/verify-css.mjs",
+    "sprites:bounds": "node scripts/inspect-sprite-bounds.mjs",
+    "sprites:optimize": "node scripts/optimize-sprites.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.3",
+    "next": "16.2.12",
+    "quais": "^1.0.0-alpha.55",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4"
+  }
+}

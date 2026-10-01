@@ -1,0 +1,698 @@
+/* =========================================================
+   CAMP WORLD — scene frame, scrolling camera, environment
+=========================================================
+   Layer order inside the scene:
+     0  backdrop art      3  ground shelves / quai glow
+     5  lighting          6  dust            7  fog
+     10 world content (objects + player, depth-sorted by y)
+     30 foreground        40 vignette
+     45 walk hint / interact bar   50 HUD   100 windows
+========================================================= */
+
+.soapy-game-camp {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--header-h));
+  min-height: calc(100vh - var(--header-h));
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--ink-900);
+  border-top: 3px solid var(--edge-700);
+}
+
+/* Edge vignette — never intercepts clicks. */
+.soapy-game-camp::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(0, 0, 0, 0.3) 74%,
+    rgba(0, 0, 0, 0.68) 100%
+  );
+}
+
+/* --- Scrolling world: taller than the viewport, camera follows miner --- */
+
+.camp-world {
+  position: relative;
+  width: 100%;
+  height: calc(
+    (100vh - var(--header-h)) *
+      var(--camp-world-scale, 2.4)
+  );
+  will-change: transform;
+}
+
+.camp-world-scrolling {
+  transition: transform 160ms linear;
+}
+
+.soapy-game-camp.camp-connect .camp-world {
+  height: 100%;
+}
+
+/* --- Background layers --- */
+
+.game-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.game-bg-back {
+  z-index: 0;
+  background-image: url("/images/game/camp-backdrop.png");
+  background-size: 100% 100%;
+}
+
+/* Warm/cool colour grade over the flat backdrop art. */
+.game-bg-mid {
+  z-index: 1;
+  background:
+    radial-gradient(
+      ellipse 60% 30% at 50% 30%,
+      rgba(150, 96, 40, 0.16) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 26% at 50% 88%,
+      rgba(190, 140, 55, 0.16) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 4, 2, 0.55) 0%,
+      transparent 16%,
+      transparent 84%,
+      rgba(6, 4, 2, 0.6) 100%
+    );
+}
+
+.game-bg-ground {
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 60%,
+    rgba(6, 4, 2, 0.3) 88%,
+    rgba(4, 2, 1, 0.5) 100%
+  );
+}
+
+.game-bg-fog {
+  z-index: 7;
+  opacity: 0.16;
+  background: linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(140, 116, 88, 0.14) 100%
+  );
+}
+
+.game-bg-foreground {
+  z-index: 30;
+  pointer-events: none;
+}
+
+/*
+  A ground shelf is drawn for each object row so every sprite has a
+  visible floor to stand on. Rows come from campLayout.js — the element
+  is positioned with its top edge exactly on the row's ground line.
+*/
+.env-shelf {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  height: 78px;
+  margin-top: -5px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(112, 78, 42, 0.5) 0,
+    rgba(70, 48, 26, 0.42) 5px,
+    rgba(34, 23, 13, 0.3) 38%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 15%,
+    #000 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 15%,
+    #000 85%,
+    transparent 100%
+  );
+}
+
+/* Deep glow beneath the camp where the Quai shafts sit. */
+.env-quai-tunnel {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  z-index: 3;
+  width: min(680px, 64vw);
+  height: 22%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    rgba(224, 178, 70, 0.2) 0%,
+    rgba(120, 82, 30, 0.12) 38%,
+    transparent 72%
+  );
+}
+
+/* --- Lighting & dust --- */
+
+.game-lighting {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 18%,
+      rgba(211, 132, 51, 0.1),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 16% 46%,
+      rgba(220, 153, 68, 0.07),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 84% 46%,
+      rgba(215, 138, 55, 0.07),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 50% 82%,
+      rgba(224, 178, 70, 0.08),
+      transparent 24%
+    );
+}
+
+.cave-dust {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: radial-gradient(
+    rgba(225, 190, 130, 0.7) 1px,
+    transparent 1px
+  );
+  background-size: 80px 80px;
+  animation: cave-dust-move 12s steps(8, end) infinite;
+}
+
+@keyframes cave-dust-move {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 80px -80px;
+  }
+}
+
+/* --- Interactive content layer --- */
+
+.game-world-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.camp-walk-surface {
+  cursor:
+    url("/images/cursors/pickaxe-cursor.svg") 4 4,
+    url("/images/cursors/pickaxe-cursor.png") 12 8,
+    crosshair;
+}
+
+/* Faint hint of the walkable floor. Bounds mirror WALK_BOUNDS. */
+.camp-walk-zone {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 20%;
+  bottom: 4%;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 48% 48% 42% 42% / 28% 28% 18% 18%;
+  background: radial-gradient(
+    ellipse at 50% 55%,
+    rgba(120, 84, 44, 0.06) 0%,
+    transparent 72%
+  );
+}
+
+/* --- Scene chrome (fixed to the viewport, outside the scrolling world) --- */
+
+.game-camp-hud {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  right: 20px;
+  z-index: 50;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.game-camp-hud > * {
+  pointer-events: auto;
+}
+
+.camp-active-miner {
+  padding: 9px 14px;
+  background: rgba(10, 7, 4, 0.9);
+  border: 2px solid var(--edge-500);
+  box-shadow: var(--shadow-panel);
+}
+
+.camp-active-miner small {
+  display: block;
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  font-weight: 700;
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+}
+
+.camp-active-miner strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--gold-500);
+  font-size: var(--fs-md);
+  letter-spacing: var(--track-tight);
+}
+
+.camp-change-miner {
+  padding: 9px 14px;
+  background: rgba(10, 7, 4, 0.9);
+  border: 2px solid var(--edge-500);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  transition:
+    color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease;
+}
+
+.camp-change-miner:hover {
+  border-color: var(--gold-700);
+  color: var(--gold-500);
+}
+
+.camp-lock-banner {
+  min-width: 180px;
+  padding: 10px 14px;
+  background: rgba(10, 7, 4, 0.92);
+  border: 2px solid var(--edge-500);
+  box-shadow: var(--shadow-panel);
+  text-align: center;
+}
+
+.camp-lock-banner small {
+  display: block;
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  font-weight: 900;
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+}
+
+.camp-lock-banner strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--gold-500);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 22px;
+  letter-spacing: var(--track-tight);
+}
+
+.camp-lock-banner span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-dim);
+  font-size: var(--fs-tiny);
+}
+
+.camp-lock-banner.status-resting {
+  border-color: #4a6034;
+}
+
+.camp-lock-banner.status-resting strong {
+  color: #a5c672;
+}
+
+.camp-lock-banner.status-claimable {
+  border-color: var(--gold-700);
+}
+
+.camp-lock-banner.status-mining {
+  border-color: #724237;
+}
+
+.camp-locked .camp-object:not(.underground-sign):not(.player-miner) {
+  opacity: 0.45;
+  filter: grayscale(0.35);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.camp-claim-ready .camp-object:not(.underground-sign):not(.player-miner):not(.camp-mine) {
+  opacity: 0.45;
+  filter: grayscale(0.35);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.camp-mine-claim-ready {
+  outline: 3px solid var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(237, 189, 85, 0.25);
+}
+
+.camp-hud-claim-button {
+  width: 100%;
+  margin-top: 10px;
+  min-height: 44px;
+}
+
+.camp-walk-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  z-index: 45;
+  margin: 0;
+  padding: 6px 12px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: rgba(10, 7, 4, 0.8);
+  border: 2px solid var(--edge-700);
+  color: var(--text-dim);
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.camp-walk-hint-mobile {
+  display: none;
+}
+
+.camp-interact-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 52px;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: rgba(12, 8, 5, 0.94);
+  border: 2px solid var(--gold-700);
+  box-shadow: var(--glow-gold);
+  animation: interact-bar-pulse 1.2s steps(2, end) infinite;
+}
+
+.camp-interact-bar span {
+  color: var(--gold-500);
+  font-size: var(--fs-small);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+@keyframes interact-bar-pulse {
+  0%,
+  100% {
+    border-color: var(--gold-700);
+  }
+
+  50% {
+    border-color: var(--gold-300);
+  }
+}
+
+.camp-walk-hint kbd,
+.camp-interact-prompt kbd,
+.camp-interact-bar kbd {
+  display: inline-block;
+  min-width: 1.4em;
+  margin: 0 2px;
+  padding: 2px 6px;
+  background: var(--ink-500);
+  border: 2px solid var(--edge-300);
+  color: var(--gold-300);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.camp-interact-bar kbd {
+  font-size: var(--fs-body);
+  padding: 3px 8px;
+}
+
+/* --- Gate screens (connect wallet / no miners) --- */
+
+.soapy-game-camp.camp-connect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soapy-game-camp.camp-connect .game-world-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camp-connect-panel {
+  position: relative;
+  z-index: 50;
+  max-width: 430px;
+  padding: 40px 32px;
+  text-align: center;
+  background: var(--surface-panel);
+  border: 4px solid var(--edge-500);
+  box-shadow: var(--shadow-panel-lg);
+}
+
+.camp-connect-panel h2 {
+  margin: 14px 0 12px;
+  color: var(--gold-500);
+  font-size: var(--fs-xl);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.camp-connect-panel p {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+.underground-pickaxe {
+  margin-bottom: 12px;
+  font-size: 44px;
+  animation: underground-pickaxe-hit 1s steps(4, end) infinite;
+}
+
+@keyframes underground-pickaxe-hit {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+/* =========================================================
+   MOBILE — touch menu over a compact camp backdrop.
+   Object-level mobile rules live in camp-objects.css.
+========================================================= */
+
+@media (max-width: 767px) {
+  .soapy-game-camp {
+    height: auto;
+    min-height: calc(
+      100dvh - var(--header-h)
+    );
+    border-top: 0;
+    padding-bottom: env(
+      safe-area-inset-bottom,
+      0px
+    );
+  }
+
+  .camp-world {
+    height: auto;
+    min-height: calc(
+      100dvh - var(--header-h)
+    );
+    transform: none !important;
+    transition: none;
+  }
+
+  .game-bg-back {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.55;
+  }
+
+  .game-bg-mid {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 4, 2, 0.35) 0%,
+        rgba(6, 4, 2, 0.55) 40%,
+        rgba(6, 4, 2, 0.82) 100%
+      );
+  }
+
+  .game-bg-ground,
+  .game-bg-fog,
+  .game-lighting,
+  .env-quai-tunnel {
+    display: none;
+  }
+
+  .game-world-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: auto;
+    min-height: auto;
+    padding: 72px 12px
+      calc(
+        64px + env(safe-area-inset-bottom, 0px)
+      );
+  }
+
+  .soapy-game-camp.camp-connect .game-world-content {
+    display: flex;
+    padding: 24px 14px
+      calc(
+        24px + env(safe-area-inset-bottom, 0px)
+      );
+  }
+
+  .env-shelf,
+  .camp-walk-zone,
+  .camp-walk-hint-desktop,
+  .camp-interact-bar,
+  .cave-dust,
+  .game-bg-foreground {
+    display: none;
+  }
+
+  .camp-walk-hint-mobile {
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: calc(
+      12px + env(safe-area-inset-bottom, 0px)
+    );
+    z-index: 45;
+    width: max-content;
+    max-width: calc(100vw - 24px);
+    padding: 8px 14px;
+    white-space: normal;
+    text-align: center;
+    background: rgba(10, 7, 4, 0.92);
+    border-color: var(--edge-500);
+    color: var(--gold-500);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .game-camp-hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 12px;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 7, 4, 0.96),
+      rgba(10, 7, 4, 0.88)
+    );
+    border-bottom: 2px solid var(--edge-700);
+  }
+
+  .camp-active-miner {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    box-shadow: none;
+  }
+
+  .camp-active-miner strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--fs-body);
+  }
+
+  .camp-change-miner {
+    flex-shrink: 0;
+    min-height: 44px;
+    padding: 8px 12px;
+    font-size: var(--fs-micro);
+  }
+
+  .camp-connect-panel {
+    width: 100%;
+    max-width: none;
+    margin: 0 4px;
+    padding: 28px 18px;
+  }
+
+  .camp-connect-panel h2 {
+    font-size: var(--fs-lg);
+  }
+}
+
+@media (max-width: 380px) {
+  .game-world-content {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1799 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> contracts@1.0.0 indexer
+> node scripts/indexers/runIndexers.js
+
+◇ injected env (19) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+Soapy indexer running...
+Poll interval: 15000ms
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571374
+Attempt 1 failed. Retrying...
+Attempt 2 failed. Retrying...
+Attempt 3 failed. Retrying...
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571388
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571398
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571409
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571416
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571424
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571427
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571433
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571438
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571456
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571466
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571474
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571486
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571497
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571503
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571515
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571519
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571527
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571542
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571555
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571564
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571571
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571574
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571580
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571589
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571600
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571609
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571615
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571627
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571632
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571638
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571647
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571653
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571666
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571668
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571677
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571691
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571700
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571718
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571730
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571741
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571745
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571759
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571769
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571780
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571788
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571799
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571810
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571823
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571837
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571847
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571854
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Attempt 3 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Indexer sync failed: Error: eth_getLogs timed out after 20000ms
+    at Timeout._onTimeout (C:\repo\TheProjectSoapy\soapy-miners\contracts\scripts\indexers\indexerUtils.js:252:15)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+--- INDEXER SYNC START ---
+Game 7571358 → 7571857
+Previous sync still running.
+Attempt 1 failed. Retrying...
+Previous sync still running.
+Attempt 2 failed. Retrying...
+Previous sync still running.
+Previous sync still running.
+Attempt 3 failed. Retrying...

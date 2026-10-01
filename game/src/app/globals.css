@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* =========================================================
+   Stylesheet entry point.
+
+   Order matters: tokens define the variables everything else
+   reads, base sets the document surface, then feature layers.
+   Each module owns its selectors exclusively — if a selector
+   needs to appear in two files, the split is wrong.
+   `npm run verify:css` enforces this.
+========================================================= */
+
+@import "../styles/tokens.css";
+@import "../styles/base.css";
+@import "../styles/ui.css";
+@import "../styles/shell.css";
+@import "../styles/pages.css";
+@import "../styles/camp-world.css";
+@import "../styles/camp-objects.css";
+@import "../styles/windows.css";
+@import "../styles/marketplace.css";
+@import "../styles/reward-mines.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}

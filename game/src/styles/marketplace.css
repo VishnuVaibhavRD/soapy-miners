@@ -1,0 +1,632 @@
+/* =========================================================
+   RESOURCE MARKETPLACE
+========================================================= */
+
+.market-page {
+  min-height: 100vh;
+  padding: 30px clamp(20px, 5vw, 80px) 70px;
+  background: radial-gradient(
+    circle at 50% 0%,
+    #28190d,
+    #0a0604 52%
+  );
+  color: #d8c09a;
+}
+
+.market-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.market-header p {
+  margin: 12px 0 0;
+  color: #806c50;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+}
+
+.market-header h1 {
+  margin: 5px 0 0;
+  color: #edbd55;
+}
+
+.market-back {
+  color: #9b805d;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.market-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.market-fee,
+.market-wallet-button {
+  padding: 10px 14px;
+  background: #130c07;
+  border: 3px solid #49301a;
+  color: #b99a65;
+}
+
+.market-wallet-button {
+  cursor: pointer;
+}
+
+.market-banner {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background: repeating-linear-gradient(
+    0deg,
+    #21140a 0,
+    #21140a 10px,
+    #28180d 11px,
+    #28180d 20px
+  );
+  border: 5px solid #160d07;
+  box-shadow: inset 0 0 0 3px #63421f;
+}
+
+.market-banner small {
+  color: #887253;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.market-banner h2 {
+  margin: 7px 0;
+  color: #edbd55;
+}
+
+.market-banner p {
+  margin: 0;
+  color: #a58e6c;
+}
+
+.market-banner-stats {
+  display: flex;
+  gap: 10px;
+}
+
+.market-banner-stats > div {
+  min-width: 120px;
+  padding: 14px;
+  background: #100a06;
+  border: 3px solid #402817;
+  text-align: center;
+}
+
+.market-banner-stats strong {
+  display: block;
+  margin-top: 6px;
+  color: #e5b552;
+  font-size: 22px;
+}
+
+.market-tabs {
+  margin-top: 30px;
+  display: flex;
+  gap: 8px;
+}
+
+.market-tabs button,
+.market-filters button {
+  padding: 11px 16px;
+  background: #120b06;
+  border: 3px solid #392415;
+  color: #806e56;
+  cursor: pointer;
+}
+
+.market-tabs button.active,
+.market-filters button.active {
+  border-color: #9a6930;
+  background: #2b1a0d;
+  color: #efbf54;
+}
+
+.market-toolbar {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.market-filters {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.market-create-button {
+  padding: 12px 18px;
+  background: #3a260f;
+  border: 3px solid #a06e2c;
+  color: #f2c75e;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.market-create-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.market-listing-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(245px, 1fr)
+  );
+  gap: 16px;
+}
+
+.market-listing-card {
+  padding: 20px;
+  background: #160e08;
+  border: 4px solid #372215;
+  box-shadow: inset 0 0 0 2px #5a3c21;
+}
+
+.market-resource-icon {
+  font-size: 36px;
+}
+
+.market-listing-title {
+  margin-top: 12px;
+}
+
+.market-listing-title small,
+.market-listing-price small,
+.market-seller small {
+  display: block;
+  color: #75644f;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.market-listing-title h3 {
+  margin: 5px 0 0;
+  color: #e7ba5d;
+}
+
+.market-listing-price {
+  margin-top: 17px;
+  padding: 12px;
+  background: #0e0906;
+  border: 2px solid #362215;
+}
+
+.market-listing-price strong {
+  display: block;
+  margin-top: 4px;
+  color: #efc453;
+  font-size: 20px;
+}
+
+.market-listing-price span {
+  display: block;
+  margin-top: 4px;
+  color: #776851;
+  font-size: 9px;
+}
+
+.market-seller {
+  margin-top: 14px;
+}
+
+.market-seller span {
+  display: block;
+  margin-top: 4px;
+  color: #9c8563;
+}
+
+.market-buy-button,
+.market-cancel-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: 3px solid #855a27;
+  background: #31200e;
+  color: #edbd55;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.market-buy-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.market-cancel-button {
+  border-color: #6c4034;
+  color: #d58b77;
+}
+
+.market-listing-status {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 7px 10px;
+  border: 2px solid;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.market-listing-status.active {
+  border-color: #526738;
+  color: #a4bf76;
+}
+
+.market-listing-status.closed {
+  border-color: #614037;
+  color: #b58173;
+}
+
+.market-empty {
+  margin-top: 25px;
+  padding: 70px 25px;
+  background: #120b07;
+  border: 4px dashed #382518;
+  text-align: center;
+}
+
+.market-empty-icon {
+  font-size: 40px;
+}
+
+.market-empty h2 {
+  color: #b99a65;
+}
+
+.market-empty p {
+  color: #756750;
+}
+
+.market-error {
+  margin-top: 16px;
+  color: #dc806b;
+}
+
+.market-create-window {
+  max-width: 650px;
+}
+
+.market-form-section {
+  margin-top: 20px;
+}
+
+.market-form-section > label,
+.market-form-grid label > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #8d7657;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.market-miner-selector {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.market-miner-selector button {
+  width: 105px;
+  padding: 8px;
+  background: #110a06;
+  border: 3px solid #3b2616;
+  color: #8d785d;
+  cursor: pointer;
+}
+
+.market-miner-selector button.active {
+  border-color: #a27130;
+  color: #efc158;
+}
+
+.market-miner-selector button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.market-miner-selector img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.market-miner-selector span {
+  display: block;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.market-miner-pager {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.market-miner-pager .pager-btn {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 6px 12px;
+  background: #110a06;
+  border: 3px solid #3b2616;
+  color: #8d785d;
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.market-miner-pager .pager-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.market-miner-pager .pager-status {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 9px;
+  color: #8d785d;
+  letter-spacing: 1px;
+}
+
+.market-resource-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.market-resource-selector button {
+  padding: 11px;
+  background: #100a06;
+  border: 3px solid #3a2617;
+  color: #88745a;
+  cursor: pointer;
+}
+
+.market-resource-selector button.active {
+  background: #2d1c0e;
+  border-color: #9a672c;
+  color: #edbd55;
+}
+
+.market-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.market-form-grid input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background: #0d0805;
+  border: 3px solid #412a18;
+  color: #e8c27b;
+}
+
+.market-price-preview {
+  margin-top: 15px;
+  padding: 12px;
+  background: #100a06;
+  border: 2px solid #3c2817;
+}
+
+.market-price-preview small,
+.market-price-preview strong {
+  display: block;
+}
+
+.market-price-preview small {
+  color: #75654e;
+}
+
+.market-price-preview strong {
+  margin-top: 5px;
+  color: #e7ba55;
+}
+
+.market-escrow-note {
+  margin-top: 15px;
+  padding: 12px;
+  border-left: 4px solid #8e632c;
+  background: #171008;
+  color: #927d60;
+  font-size: 10px;
+}
+
+.market-create-submit {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  background: #38240f;
+  border: 3px solid #9d6c2c;
+  color: #efc058;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.market-create-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.market-success {
+  margin-top: 14px;
+  color: #a4c179;
+}
+
+.market-buy-window {
+  max-width: 600px;
+}
+
+.market-buy-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.market-buy-summary > div {
+  padding: 14px;
+  background: #100a06;
+  border: 3px solid #412a17;
+}
+
+.market-buy-summary small,
+.market-capacity-preview small {
+  display: block;
+  color: #78664d;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.market-buy-summary strong {
+  display: block;
+  margin-top: 6px;
+  color: #e9b957;
+  font-size: 18px;
+}
+
+.market-capacity-preview {
+  margin-top: 18px;
+  padding: 14px;
+  background: #100a06;
+  border: 3px solid #3d2918;
+}
+
+.market-capacity-preview strong {
+  display: block;
+  margin-top: 5px;
+  color: #e4b65a;
+}
+
+.market-capacity-preview span {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 9px;
+}
+
+.market-capacity-preview span.enough {
+  color: #9fbe72;
+}
+
+.market-capacity-preview span.missing {
+  color: #dd806d;
+}
+
+.market-buy-warning {
+  margin-top: 16px;
+  padding: 12px;
+  background: #171008;
+  border-left: 4px solid #90642d;
+  color: #907b5e;
+  font-size: 10px;
+}
+
+@media (max-width: 750px) {
+  .market-header,
+  .market-banner,
+  .market-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .market-header-right {
+    flex-wrap: wrap;
+  }
+
+  .market-banner-stats {
+    width: 100%;
+  }
+
+  .market-banner-stats > div {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .market-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.market-cancel-window {
+  max-width: 580px;
+}
+
+.market-cancel-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.market-cancel-summary > div {
+  padding: 14px;
+  background: #100a06;
+  border: 3px solid #422a18;
+}
+
+.market-cancel-summary small {
+  display: block;
+  color: #77654c;
+  font-size: 8px;
+}
+
+.market-cancel-summary strong {
+  display: block;
+  margin-top: 5px;
+  color: #dfb25b;
+}
+
+.market-cancel-description {
+  margin-top: 18px;
+  color: #998367;
+}
+
+.market-cancel-note {
+  margin-top: 16px;
+  padding: 12px;
+  background: #171008;
+  border-left: 4px solid #84542d;
+  color: #8e795e;
+  font-size: 10px;
+}
+
+.market-confirm-cancel {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  background: #2c1712;
+  border: 3px solid #7e4538;
+  color: #df907b;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.market-confirm-cancel:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .market-buy-summary,
+  .market-cancel-summary {
+    grid-template-columns: 1fr;
+  }
+}

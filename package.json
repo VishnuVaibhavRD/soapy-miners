@@ -1,0 +1,16 @@
+{
+  "name": "soapy-miners",
+  "version": "1.0.0",
+  "description": "Soapy Miners Phase II — contracts and game dashboard",
+  "private": true,
+  "scripts": {
+    "contracts:compile": "npm run compile --prefix contracts",
+    "contracts:deploy:orchard": "npm run deploy:orchard --prefix contracts",
+    "contracts:deploy:cyprus1": "npm run deploy:cyprus1 --prefix contracts",
+    "game:dev": "npm run dev --prefix game",
+    "game:build": "npm run build --prefix game"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

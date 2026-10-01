@@ -1,0 +1,647 @@
+/* =========================================================
+   DIALOG WINDOWS — the in-camp modal panels
+========================================================= */
+
+.game-window-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  animation: window-fade var(--dur-med) ease-out;
+}
+
+@keyframes window-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.game-dialog-window {
+  position: relative;
+  width: min(480px, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 26px 28px 28px;
+  background: var(--surface-plank);
+  border: 4px solid var(--edge-900);
+  box-shadow:
+    var(--inset-rim),
+    10px 10px 0 rgba(0, 0, 0, 0.45);
+  text-align: center;
+  animation: window-rise var(--dur-med) steps(4, end);
+}
+
+.game-dialog-wide {
+  width: min(620px, 100%);
+}
+
+@keyframes window-rise {
+  from {
+    transform: translateY(10px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* --- Header --- */
+
+.dialog-character {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+}
+
+.game-dialog-window h2 {
+  margin: 8px 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--edge-700);
+  color: var(--gold-500);
+  font-size: var(--fs-xl);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.dialog-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 24px;
+  line-height: 1;
+  transition: color var(--dur-fast) ease;
+}
+
+.dialog-close:hover {
+  color: var(--gold-500);
+}
+
+/* --- Shared body blocks --- */
+
+.merchant-balance {
+  margin: 20px 0;
+  padding: 14px;
+  background: var(--surface-sunken);
+  border: 2px solid var(--edge-500);
+}
+
+.merchant-balance small {
+  display: block;
+  color: var(--text-dim);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.merchant-balance strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--gold-300);
+  font-size: var(--fs-xl);
+}
+
+.merchant-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.merchant-shop button {
+  padding: 14px 8px;
+  background: var(--surface-sunken);
+  border: 2px solid var(--edge-500);
+  color: var(--gold-500);
+  font: inherit;
+  transition:
+    border-color var(--dur-fast) ease,
+    background var(--dur-fast) ease;
+}
+
+.merchant-shop button:hover:not(:disabled) {
+  border-color: var(--gold-700);
+  background: rgba(227, 184, 77, 0.08);
+}
+
+.merchant-shop button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.merchant-shop strong {
+  display: block;
+  font-size: var(--fs-lg);
+}
+
+.merchant-shop span {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-dim);
+  font-size: var(--fs-small);
+}
+
+/* --- Mines window --- */
+
+.camp-mine-subtitle {
+  margin: 0 0 14px;
+  color: var(--text-dim);
+  font-size: var(--fs-small);
+}
+
+.camp-mine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.camp-expedition-confirm {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px solid var(--edge-700);
+}
+
+.camp-expedition-confirm > p {
+  margin: 0 0 12px;
+  color: var(--gold-500);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.camp-enter-shaft {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* --- Miner window --- */
+
+.camp-miner-portrait {
+  display: flex;
+  justify-content: center;
+  margin: 4px auto 18px;
+}
+
+.camp-miner-portrait .camp-player-miner {
+  width: 132px;
+  height: 132px;
+  animation: none;
+}
+
+.camp-miner-inv-summary {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 2px solid var(--edge-700);
+}
+
+.camp-miner-switch {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 2px solid var(--edge-700);
+}
+
+.camp-miner-switch small {
+  display: block;
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.camp-miner-switch-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.camp-miner-switch-list button {
+  padding: 8px 12px;
+  background: var(--ink-600);
+  border: 2px solid var(--edge-500);
+  color: var(--text-dim);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  transition:
+    color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease;
+}
+
+.camp-miner-switch-list button:hover {
+  border-color: var(--edge-300);
+  color: var(--text);
+}
+
+.camp-miner-switch-list button.active {
+  border-color: var(--gold-500);
+  color: var(--gold-500);
+}
+
+/* --- Window action row --- */
+
+.camp-window-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.camp-window-action {
+  flex: 1;
+  padding: 12px 10px;
+  background: var(--ink-600);
+  border: 2px solid var(--edge-500);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  transition:
+    color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    background var(--dur-fast) ease;
+}
+
+.camp-window-action:hover {
+  background: rgba(227, 184, 77, 0.08);
+  border-color: var(--edge-300);
+  color: var(--text);
+}
+
+/* --- Returned loot popup --- */
+
+.returned-loot-window {
+  text-align: center;
+}
+
+.returned-loot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 8px 0 18px;
+}
+
+.returned-loot-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  background: var(--surface-sunken);
+  border: 2px solid var(--edge-500);
+}
+
+.returned-loot-grid span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.returned-loot-grid strong {
+  color: var(--gold-300);
+  font-size: var(--fs-lg);
+}
+
+.returned-loot-grid small {
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+}
+
+.returned-xp {
+  margin: 0 0 22px;
+  padding: 10px 14px;
+  background: rgba(227, 184, 77, 0.1);
+  border: 2px solid var(--gold-700);
+  color: var(--gold-300);
+  font-size: var(--fs-md);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+}
+
+@media (max-width: 767px) {
+  .game-window-backdrop {
+    position: fixed;
+    inset: 0;
+    align-items: flex-end;
+    justify-content: stretch;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.78);
+  }
+
+  .game-dialog-window,
+  .game-dialog-wide {
+    width: 100%;
+    max-height: min(
+      92dvh,
+      calc(100dvh - env(safe-area-inset-top, 0px))
+    );
+    margin: 0;
+    padding:
+      22px 16px
+      calc(22px + env(safe-area-inset-bottom, 0px));
+    border-width: 3px 0 0;
+    border-radius: 16px 16px 0 0;
+    box-shadow:
+      var(--inset-rim),
+      0 -8px 0 rgba(0, 0, 0, 0.35);
+    animation: window-sheet var(--dur-med) steps(4, end);
+  }
+
+  @keyframes window-sheet {
+    from {
+      transform: translateY(24px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .dialog-close {
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    border: 2px solid var(--edge-500);
+    color: var(--text);
+    font-size: 22px;
+  }
+
+  .game-dialog-window h2 {
+    margin: 4px 28px 16px 0;
+    padding-bottom: 12px;
+    font-size: var(--fs-lg);
+    text-align: left;
+  }
+
+  .dialog-character {
+    text-align: left;
+  }
+
+  .merchant-shop {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .merchant-shop button {
+    min-height: 56px;
+    padding: 14px 12px;
+  }
+
+  .camp-window-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .camp-window-action,
+  .game-primary-button.camp-enter-shaft {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .game-dialog-window h2 {
+    font-size: var(--fs-md);
+  }
+}
+
+.mine-claim-panel {
+  margin-bottom: 22px;
+  padding: 20px;
+  background: #171008;
+  border: 3px solid #a06e2c;
+  text-align: center;
+}
+
+.mine-claim-panel h3 {
+  margin: 8px 0;
+  color: #efc453;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.mine-claim-button {
+  width: 100%;
+  margin-top: 16px;
+  min-height: 48px;
+}
+
+.mine-back-button {
+  margin-top: 12px;
+}
+
+/* =========================================================
+   BLACKSMITH WORKSHOP
+========================================================= */
+
+.workshop-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.workshop-tabs button {
+  padding: 12px 10px;
+  background: #120b06;
+  border: 3px solid #3c2817;
+  color: #7f6d54;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.workshop-tabs button.active {
+  background: #2b1b0e;
+  border-color: #a37231;
+  color: #efc35a;
+}
+
+.workshop-tabs button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.workshop-dialogue {
+  color: #a38c6a;
+  font-style: italic;
+}
+
+.workshop-status {
+  margin: 12px 0;
+  color: #98815e;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.workshop-current-gear {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.workshop-current-gear > div,
+.workshop-power-preview {
+  padding: 14px;
+  background: #100a06;
+  border: 3px solid #422914;
+}
+
+.workshop-current-gear small,
+.workshop-power-preview small {
+  display: block;
+  color: #7d6a50;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.workshop-current-gear strong,
+.workshop-power-preview strong {
+  display: block;
+  margin-top: 6px;
+  color: #e6ba55;
+  font-size: 20px;
+}
+
+.workshop-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 20px 0;
+  color: #d9ad4c;
+}
+
+.workshop-arrow span {
+  padding: 9px 14px;
+  background: #171008;
+  border: 3px solid #4c3219;
+}
+
+.workshop-arrow strong {
+  font-size: 24px;
+}
+
+.workshop-power-preview {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.game-dialog-window h3 {
+  margin-bottom: 12px;
+  color: #98815e;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.upgrade-cost-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.upgrade-cost {
+  padding: 12px 8px;
+  background: #100a06;
+  border: 3px solid #3d2816;
+  text-align: center;
+}
+
+.upgrade-cost small {
+  display: block;
+  color: #77654c;
+  font-size: 8px;
+}
+
+.upgrade-cost strong {
+  display: block;
+  margin-top: 6px;
+  color: #e0b251;
+  font-size: 18px;
+}
+
+.upgrade-cost span {
+  display: block;
+  margin-top: 5px;
+  color: #796b59;
+  font-size: 8px;
+}
+
+.upgrade-cost.enough {
+  border-color: #4e6332;
+}
+
+.upgrade-cost.missing {
+  border-color: #724237;
+}
+
+.upgrade-cost.missing strong {
+  color: #d47c69;
+}
+
+.workshop-upgrade-button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.workshop-error {
+  margin-top: 14px;
+  color: #dd806c;
+}
+
+.workshop-success {
+  margin-top: 14px;
+  color: #9fbe70;
+}
+
+.workshop-max-level {
+  padding: 20px;
+  background: #12160d;
+  border: 3px solid #4b6032;
+  text-align: center;
+}
+
+.workshop-max-level strong,
+.workshop-max-level span {
+  display: block;
+}
+
+.workshop-max-level strong {
+  color: #a5c672;
+}
+
+.workshop-max-level span {
+  margin-top: 7px;
+  color: #7c8669;
+}
+
+@media (max-width: 700px) {
+  .upgrade-cost-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

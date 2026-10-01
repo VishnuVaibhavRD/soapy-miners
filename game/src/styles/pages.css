@@ -1,0 +1,281 @@
+/* =========================================================
+   STANDALONE SCREENS — placeholder pages and miner select
+========================================================= */
+
+/* --- Page heading --- */
+
+.game-title p {
+  margin: 0 0 6px;
+  color: var(--gold-500);
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+}
+
+.game-title h1 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 900;
+  letter-spacing: var(--track-tight);
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+.game-title span {
+  display: block;
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+/* --- Locked / placeholder panel --- */
+
+.game-welcome-panel {
+  position: relative;
+  margin-bottom: 36px;
+  padding: 46px 32px;
+  text-align: center;
+  background: var(--surface-panel);
+  border: 4px solid var(--edge-500);
+  box-shadow: var(--shadow-panel-lg);
+}
+
+.game-welcome-panel h2 {
+  margin: 0 0 12px;
+  font-size: var(--fs-xl);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.game-welcome-panel p {
+  max-width: 430px;
+  margin: 0 auto 24px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.game-pickaxe {
+  margin-bottom: 16px;
+  font-size: 46px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.game-locked-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: var(--ink-600);
+  border: 2px solid var(--edge-500);
+  color: var(--text-dim);
+  font-size: var(--fs-small);
+  font-weight: 900;
+  letter-spacing: var(--track-wider);
+}
+
+/* --- Miner select screen --- */
+
+.miner-select-screen {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+}
+
+.miner-select-heading {
+  text-align: center;
+}
+
+.miner-select-heading p {
+  margin: 0 0 8px;
+  color: var(--gold-500);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: var(--track-wider);
+}
+
+.miner-select-heading h1 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 4.5vw, 40px);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+.miner-select-heading span {
+  color: var(--text-muted);
+  font-size: var(--fs-body);
+}
+
+.miner-select-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0 28px;
+}
+
+.miner-select-meta strong {
+  padding: 9px 16px;
+  background: var(--surface-sunken);
+  border: 2px solid var(--edge-500);
+  color: var(--gold-300);
+  font-size: var(--fs-body);
+}
+
+.miner-select-meta span {
+  color: var(--text-dim);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+}
+
+.miner-select-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(170px, 1fr)
+  );
+  gap: 14px;
+}
+
+.miner-select-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  background: var(--surface-panel);
+  border: 3px solid var(--edge-500);
+  box-shadow: var(--shadow-panel);
+  color: var(--text);
+  font: inherit;
+  transition:
+    transform var(--dur-fast) ease,
+    border-color var(--dur-fast) ease;
+}
+
+.miner-select-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--edge-300);
+}
+
+.miner-select-card.selected {
+  border-color: var(--gold-500);
+  box-shadow:
+    0 0 0 2px var(--edge-900),
+    var(--glow-gold);
+}
+
+.miner-select-portrait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 12px;
+  background: var(--ink-900);
+  border: 2px solid var(--edge-700);
+  overflow: hidden;
+}
+
+.miner-select-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.miner-select-portrait span {
+  font-size: 44px;
+}
+
+.miner-select-card h3 {
+  margin: 0 0 4px;
+  font-size: var(--fs-small);
+  letter-spacing: var(--track-tight);
+  text-align: center;
+}
+
+.miner-select-card small {
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+}
+
+.miner-select-card em {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold-500);
+  font-size: var(--fs-micro);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+}
+
+.miner-select-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+@media (max-width: 767px) {
+  .miner-select-screen {
+    padding:
+      24px 14px
+      calc(40px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .miner-select-heading h1 {
+    font-size: clamp(22px, 7vw, 32px);
+  }
+
+  .miner-select-meta {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 20px;
+  }
+
+  .miner-select-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .miner-select-card {
+    min-height: 168px;
+    padding: 12px 10px;
+  }
+
+  .miner-select-actions {
+    position: sticky;
+    bottom: 0;
+    margin-top: 24px;
+    padding:
+      12px 0
+      calc(8px + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--ink-900) 30%
+    );
+  }
+
+  .miner-select-actions .game-primary-button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .game-welcome-panel {
+    padding: 28px 18px;
+  }
+
+  .game-title h1 {
+    font-size: clamp(24px, 8vw, 36px);
+  }
+}
+
+@media (max-width: 380px) {
+  .miner-select-grid {
+    grid-template-columns: 1fr;
+  }
+}

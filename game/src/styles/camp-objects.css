@@ -1,0 +1,729 @@
+/* =========================================================
+   CAMP OBJECTS — interactables, sprites and the player miner
+=========================================================
+   Every object is feet-anchored: the element box is the sprite
+   only, and its bottom edge sits on the ground point supplied by
+   campLayout.js. Label and interact prompt are absolutely
+   positioned so they never change the box height.
+
+   Sprite art is pre-trimmed to its opaque bounds
+   (scripts/optimize-sprites.mjs), so `width` means visible width
+   and the box bottom is the true base of the drawing.
+========================================================= */
+
+.camp-object {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: center;
+  transition: transform var(--dur-fast) var(--ease-step);
+}
+
+.camp-object-grounded {
+  transform: translate(-50%, -100%);
+}
+
+.camp-object-grounded:hover {
+  transform: translate(-50%, calc(-100% - 4px));
+}
+
+.camp-object-visual {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.camp-object-visual .pixel-art,
+.camp-object-visual .game-asset-fallback {
+  filter:
+    brightness(1.06)
+    contrast(1.05)
+    drop-shadow(0 6px 0 rgba(0, 0, 0, 0.4))
+    drop-shadow(0 0 14px rgba(0, 0, 0, 0.4));
+}
+
+/* Ground shadow — tracks the sprite width automatically. */
+.camp-object-spotlight {
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  z-index: 1;
+  width: 112%;
+  height: 26px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.26) 48%,
+    transparent 72%
+  );
+}
+
+.camp-object-label {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 3;
+  padding: 5px 10px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(9, 6, 3, 0.94);
+  border: 2px solid var(--edge-500);
+  opacity: 0.92;
+  transition: opacity var(--dur-fast) var(--ease-step);
+}
+
+.camp-object-label strong {
+  display: block;
+  color: var(--text);
+  font-size: var(--fs-tiny);
+  font-weight: 950;
+  letter-spacing: var(--track-wide);
+}
+
+.camp-object-label em {
+  display: block;
+  margin-top: 3px;
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  font-style: normal;
+  letter-spacing: var(--track-tight);
+}
+
+.camp-object:hover .camp-object-label,
+.camp-object-in-range .camp-object-label {
+  opacity: 1;
+}
+
+.camp-object-in-range .camp-object-label {
+  border-color: var(--gold-700);
+}
+
+.camp-object-in-range .camp-object-visual {
+  filter: drop-shadow(0 0 12px rgba(235, 188, 80, 0.45));
+}
+
+.camp-interact-prompt {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  z-index: 4;
+  padding: 5px 9px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(18, 11, 6, 0.96);
+  border: 2px solid var(--gold-500);
+  color: var(--gold-300);
+  font-size: var(--fs-tiny);
+  font-weight: 900;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  animation: interact-bar-pulse 1.2s steps(2, end) infinite;
+}
+
+/* --- Sprite sizing ---------------------------------------
+   Widths are chosen so each trimmed sprite lands on a
+   consistent on-screen height, keeping the camp in scale.
+--------------------------------------------------------- */
+
+.mine-entrance-img {
+  width: min(220px, 24vw);
+  height: auto;
+}
+
+.merchant-sprite-img {
+  width: min(108px, 12vw);
+  height: auto;
+}
+
+.workshop-scene-img {
+  width: min(215px, 23vw);
+  height: auto;
+}
+
+.storage-chest-img {
+  width: min(130px, 14vw);
+  height: auto;
+}
+
+.market-stall-img {
+  width: min(180px, 19vw);
+  height: auto;
+}
+
+.quai-door-img {
+  position: relative;
+  width: min(320px, 34vw);
+  height: auto;
+  filter:
+    brightness(1.1)
+    contrast(1.06)
+    drop-shadow(0 0 22px rgba(200, 165, 75, 0.4));
+  animation: quai-glow 2.4s steps(4, end) infinite;
+}
+
+@keyframes quai-glow {
+  0%,
+  100% {
+    filter:
+      brightness(1.08)
+      contrast(1.06)
+      drop-shadow(0 0 18px rgba(200, 165, 75, 0.32));
+  }
+
+  50% {
+    filter:
+      brightness(1.16)
+      contrast(1.08)
+      drop-shadow(0 0 30px rgba(224, 186, 92, 0.5));
+  }
+}
+
+/* Emoji / CSS fallbacks when a PNG is unavailable. */
+.mine-entrance-hit,
+.merchant-sprite,
+.workshop-art,
+.storage-art,
+.market-art {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.quai-door-art {
+  font-size: 54px;
+  line-height: 1;
+  color: var(--gold-700);
+}
+
+.camp-mine-art {
+  position: relative;
+}
+
+/* --- Quai shafts: the landmark at the bottom of the camp --- */
+
+.quai-shaft {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quai-shaft-aura {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(560px, 52vw);
+  height: min(340px, 38vh);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(230, 195, 90, 0.2) 0%,
+    rgba(150, 110, 45, 0.1) 40%,
+    transparent 72%
+  );
+  animation: quai-aura 3s steps(6, end) infinite;
+}
+
+@keyframes quai-aura {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+.quai-reward-door .camp-object-label {
+  opacity: 1;
+  padding: 8px 18px;
+  border-color: var(--gold-700);
+  box-shadow: var(--glow-gold);
+}
+
+.quai-reward-door .camp-object-label strong {
+  color: var(--gold-300);
+  font-size: var(--fs-body);
+  letter-spacing: var(--track-wider);
+}
+
+.quai-reward-door .camp-object-spotlight {
+  height: 38px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(224, 178, 70, 0.3) 0%,
+    rgba(120, 84, 34, 0.14) 50%,
+    transparent 72%
+  );
+}
+
+/* --- Storage "almost full" state --- */
+
+.camp-storage.almost-full .storage-chest-img {
+  filter:
+    brightness(1.1)
+    contrast(1.06)
+    drop-shadow(0 6px 0 rgba(0, 0, 0, 0.4))
+    drop-shadow(0 0 12px rgba(220, 120, 60, 0.6));
+}
+
+.camp-storage.almost-full .camp-object-label em {
+  color: var(--warning);
+}
+
+/* --- Player miner --- */
+
+.player-miner-movable {
+  transform: translate(-50%, -100%);
+}
+
+.player-miner-movable:hover {
+  transform: translate(-50%, calc(-100% - 4px));
+}
+
+.player-miner-movable.is-path-walking {
+  transition-property: left, top;
+  transition-timing-function: steps(10, end);
+}
+
+.player-miner-fixed {
+  left: 50%;
+  bottom: 95px;
+  transform: translateX(-50%);
+}
+
+.player-miner-movable.facing-left .camp-object-visual {
+  transform: scaleX(-1);
+}
+
+/*
+  The miner sprite is an NFT image of unknown aspect ratio, so it is
+  contained in a fixed box — otherwise a tall or wide token would
+  change the object height and break the ground anchoring.
+*/
+.camp-player-miner {
+  width: clamp(96px, 11vw, 128px);
+  height: clamp(104px, 12vw, 136px);
+  object-fit: contain;
+  object-position: center bottom;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 10px 0 rgba(0, 0, 0, 0.35));
+  animation: miner-idle 1.4s steps(2, end) infinite;
+}
+
+.player-miner-movable.is-walking .camp-player-miner {
+  animation: miner-walk 0.35s steps(2, end) infinite;
+}
+
+@keyframes miner-idle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes miner-walk {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.miner-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 128px;
+  background: rgba(20, 12, 6, 0.6);
+  border: 3px solid var(--edge-500);
+  font-size: 60px;
+}
+
+/* --- Underground / claimable status sign (replaces the miner) --- */
+
+.underground-sign {
+  pointer-events: none;
+  cursor: default;
+}
+
+.underground-sign-claimable,
+.status-board-interactive {
+  pointer-events: auto;
+}
+
+.resting-miner-compact {
+  text-align: center;
+  pointer-events: none;
+}
+
+.resting-miner-art {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.resting-miner-sprite {
+  opacity: 0.82;
+  filter:
+    saturate(0.75)
+    brightness(0.88)
+    drop-shadow(0 10px 0 rgba(0, 0, 0, 0.35));
+}
+
+.resting-symbol {
+  position: absolute;
+  right: -18px;
+  top: -8px;
+  color: #ddc27c;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  animation:
+    resting-symbol-rise
+    1.6s
+    steps(4, end)
+    infinite;
+}
+
+.underground-camp-marker {
+  pointer-events: none;
+  text-align: center;
+}
+
+.claim-loot-button {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.game-error {
+  margin: 10px 0 0;
+  color: var(--danger);
+  font-size: var(--fs-small);
+  line-height: 1.4;
+}
+
+@keyframes resting-symbol-rise {
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-13px);
+    opacity: 0;
+  }
+}
+
+.underground-sign-board {
+  padding: 16px 22px;
+  background: var(--surface-plank);
+  border: 3px solid var(--edge-700);
+  box-shadow: var(--inset-rim);
+}
+
+.underground-sign-board p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wider);
+}
+
+.underground-pickaxe-hit-wrap {
+  margin: 8px 0;
+  font-size: 30px;
+  animation: underground-pickaxe-hit 1s steps(4, end) infinite;
+}
+
+.underground-sign-board strong {
+  display: block;
+  color: var(--gold-300);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 26px;
+  letter-spacing: var(--track-tight);
+}
+
+.underground-sign-board small {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-dim);
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--track-wide);
+}
+
+.camp-lock-note {
+  display: block;
+  margin-top: 10px;
+  padding: 6px 8px;
+  background: #1a1008;
+  border: 2px solid #5a3a1f;
+  color: #c49a55;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.camp-back-button {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 12px;
+  background: #120b06;
+  border: 3px solid #49301a;
+  color: #d2b27a;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.camp-back-button:hover {
+  border-color: #a37231;
+  color: #efc35a;
+}
+
+.resting-sign .underground-sign-board {
+  border-color: #4a6034;
+  box-shadow: inset 0 0 0 2px #6f8550;
+}
+
+.resting-sign-zzz {
+  margin: 8px 0;
+  color: #ddc27c;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  animation: resting-symbol-rise 1.6s steps(4, end) infinite;
+}
+
+/* =========================================================
+   MOBILE — touch-friendly location cards
+========================================================= */
+
+@media (max-width: 767px) {
+  .camp-object,
+  .player-miner-movable,
+  .player-miner-fixed {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    transition: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 148px;
+    padding: 14px 10px 12px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(28, 20, 12, 0.72),
+        rgba(10, 7, 4, 0.88)
+      );
+    border: 2px solid var(--edge-500);
+    box-shadow: var(--shadow-panel);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .camp-object:active,
+  .player-miner-movable:active {
+    border-color: var(--gold-700);
+    background: rgba(227, 184, 77, 0.1);
+  }
+
+  .camp-object:hover {
+    transform: none !important;
+  }
+
+  .camp-object-visual {
+    flex: 1;
+    width: 100%;
+    min-height: 72px;
+  }
+
+  .camp-object-label {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    padding: 7px 8px;
+    transform: none;
+    opacity: 1;
+    white-space: normal;
+    border-color: var(--edge-700);
+  }
+
+  .camp-object-label strong {
+    font-size: var(--fs-tiny);
+    letter-spacing: 0.08em;
+  }
+
+  .camp-object-label em {
+    margin-top: 2px;
+    font-size: 7px;
+  }
+
+  .camp-interact-prompt,
+  .camp-object-spotlight,
+  .quai-shaft-aura {
+    display: none;
+  }
+
+  /* Visual order: miner → mine → left/right pairs → quai */
+  .player-miner {
+    order: 1;
+    grid-column: 1 / -1;
+    min-height: 168px;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+
+  .player-miner .camp-object-visual {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 0;
+  }
+
+  .player-miner .camp-object-label {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .camp-mine {
+    order: 2;
+    grid-column: 1 / -1;
+    min-height: 160px;
+  }
+
+  .gold-merchant {
+    order: 3;
+  }
+
+  .camp-workshop {
+    order: 4;
+  }
+
+  .camp-storage {
+    order: 5;
+  }
+
+  .camp-market {
+    order: 6;
+  }
+
+  .quai-reward-door {
+    order: 7;
+    grid-column: 1 / -1;
+    min-height: 180px;
+    border-color: var(--gold-700);
+    background:
+      linear-gradient(
+        180deg,
+        rgba(90, 62, 20, 0.35),
+        rgba(10, 7, 4, 0.92)
+      );
+  }
+
+  .underground-sign,
+  .resting-sign {
+    order: 1;
+    grid-column: 1 / -1;
+  }
+
+  .mine-entrance-img,
+  .workshop-scene-img,
+  .market-stall-img,
+  .storage-chest-img,
+  .merchant-sprite-img {
+    width: min(120px, 34vw);
+    max-height: 96px;
+    object-fit: contain;
+  }
+
+  .camp-mine .mine-entrance-img {
+    width: min(180px, 48vw);
+    max-height: 110px;
+  }
+
+  .quai-door-img {
+    width: min(220px, 58vw);
+    max-height: 120px;
+    object-fit: contain;
+  }
+
+  .camp-player-miner {
+    width: 96px;
+    height: 104px;
+  }
+
+  .quai-reward-door .camp-object-label {
+    padding: 8px 12px;
+  }
+
+  .quai-reward-door .camp-object-label strong {
+    font-size: var(--fs-small);
+    letter-spacing: var(--track-wide);
+  }
+
+  .underground-sign-board {
+    width: 100%;
+    padding: 14px 16px;
+  }
+
+  .underground-sign-board strong {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gold-merchant,
+  .camp-workshop,
+  .camp-storage,
+  .camp-market,
+  .camp-mine,
+  .player-miner,
+  .quai-reward-door {
+    grid-column: 1;
+  }
+
+  .player-miner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .player-miner .camp-object-label {
+    text-align: center;
+  }
+}
